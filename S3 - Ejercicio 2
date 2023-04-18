@@ -1,0 +1,42 @@
+/*
+Elaborar un programa en Java que permita ingresar el nombre del
+trabajador, su sueldo básico y el número de hijos, se deberá
+mostrar su bonificación y el sueldo final. Tenga en cuenta que la
+empresa está dando una bonificación del 7% del sueldo básico sólo
+en el caso el trabajador tuviese hijos.
+*/
+
+package ejercicio.pkg2;
+
+import java.util.Scanner;
+
+public class Ejercicio2 {
+
+    public static void main(String[] args) {
+        
+        String trabajador;
+        double sueldoB, nHijos, bonificacion, sueldoF;
+        
+        Scanner sc = new Scanner (System.in);
+        
+        System.out.println("Ingresar nombre del trabajador: ");
+        trabajador = sc.next();
+        
+        System.out.println("Ingresar sueldo básico: ");
+        sueldoB = sc.nextDouble();
+        
+        System.out.println("Ingresar número de hijos");
+        nHijos = sc.nextDouble();
+        
+        if (nHijos >= 1) {
+            
+            bonificacion = (sueldoB * 0.07);
+            sueldoF = sueldoB + bonificacion;
+            System.out.println("La bonificación para " + trabajador + " será de: S/" + bonificacion);
+            System.out.println("Su sueldo final es: S/" + sueldoF);
+            
+        } else {
+            System.out.println("El sueldo final de " + trabajador + " es: S/" + sueldoB);
+        }
+    }
+}
