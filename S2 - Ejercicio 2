@@ -1,0 +1,32 @@
+/* Programa que calcule e imprima el salario
+semanal de un empleado a partir de sus horas
+semanales trabajadas y de su salario por hora. */
+
+package ejercicio.pkg2;
+
+import java.util.Scanner;
+
+public class Ejercicio2 {
+
+    public static void main(String[] args) {
+
+        String nombre;
+        float horasTrabajadas, pagoxHora, salarioSemanal;
+        
+        Scanner sc = new Scanner (System.in);
+        
+        System.out.println("Ingresar nombre del empleado: ");
+        nombre = sc.next();
+        
+        System.out.println("Ingresar horas trabajadas: ");
+        horasTrabajadas = sc.nextFloat();
+        
+        System.out.println("Ingresar el pago por hora: ");
+        pagoxHora = sc.nextFloat();
+        
+        salarioSemanal = horasTrabajadas * pagoxHora;
+        
+        System.out.println("El salario semanal de " + nombre + " será: S/" + salarioSemanal);
+        
+    } 
+}
