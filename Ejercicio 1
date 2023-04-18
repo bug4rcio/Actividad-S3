@@ -1,0 +1,29 @@
+//Programa que imprima la suma de tres notas
+
+package ejercicio.pkg1;
+
+import java.util.Scanner;
+
+public class Ejercicio1 {
+
+    public static void main(String[] args) {
+
+        double nota1, nota2, nota3, suma;
+        
+        Scanner validar = new Scanner (System.in);
+        
+        System.out.println("Ingresar nota 1: ");
+        nota1 = validar.nextDouble();
+        
+        System.out.println("Ingresar nota 2: ");
+        nota2 = validar.nextDouble();
+        
+        System.out.println("Ingresar nota 3: ");
+        nota3 = validar.nextDouble();
+        
+        suma = nota1 + nota2 + nota3;
+        
+        System.out.println("La suma de las tres notas es: " + suma);
+ 
+    } 
+}
