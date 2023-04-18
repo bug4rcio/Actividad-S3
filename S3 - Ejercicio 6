@@ -1,0 +1,36 @@
+/*
+Elabore un programa que permita determinar la velocidad (m/s)
+constante de un móvil que se ha desplazado una determinada
+distancia (m), en un cierto tiempo (s). Se debe considerar que el
+valor de la distancia y del tiempo deben ser mayor de cero, en caso
+contrario mostrar un mensaje que corresponda
+*/
+
+package ejercicio.pkg6;
+
+import java.util.Scanner;
+
+public class Ejercicio6 {
+
+    public static void main(String[] args) {
+        
+        double velocidad, distancia, tiempo;
+        
+        Scanner sc = new Scanner (System.in);
+        
+        System.out.println("Ingresar distancia en metros:");
+        distancia = sc.nextDouble();
+        
+        System.out.println("Ingresar tiempo en segundos:");
+        tiempo = sc.nextDouble();
+        
+        if (distancia <= 0 || tiempo <= 0) {
+            System.out.println("Ingresar datos válidos");
+            
+        } else {
+            velocidad = (distancia/tiempo);
+            System.out.println("La velocidad constante del móvil es: " + velocidad + " m/s");
+            
+        }
+    }
+}
