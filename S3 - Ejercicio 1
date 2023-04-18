@@ -1,0 +1,45 @@
+/*
+Diseñar un programa que permita el ingreso del nombre de un
+alumno y las notas de su examen parcial, examen final y el
+promedio de prácticas; su programa deberá mostrar el nombre del
+alumno y su promedio final solo si el alumno está aprobado, caso
+contrario imprimir “Alumno desaprobado...”. Tenga en cuenta que
+para el cálculo del promedio la nota del examen final tiene peso
+doble.
+*/
+
+package ejercicio.pkg1;
+
+import java.util.Scanner;
+
+public class Ejercicio1 {
+
+    public static void main(String[] args) {
+        
+        String alumno;
+        double eParcial, eFinal, practicas, promedio;
+        
+        Scanner sc = new Scanner (System.in);
+        
+        System.out.println("Ingresar nombre del alumno:");
+        alumno = sc.next();
+        
+        System.out.println("Ingresar nota del examen parcial:");
+        eParcial = sc.nextDouble();
+        
+        System.out.println("Ingresar nota del examen final:");
+        eFinal = sc.nextDouble();
+        
+        System.out.println("Ingresar promedio de prácticas:");
+        practicas = sc.nextDouble();
+        
+        promedio = (eParcial + eFinal + eFinal + practicas) / 4;
+        
+        if (promedio >= 11.5) {
+            System.out.println("El promedio final de " + alumno + " es de: " + promedio);
+            
+        } else { 
+            System.out.println("Alumno desaprobado");
+        }
+    }
+}
