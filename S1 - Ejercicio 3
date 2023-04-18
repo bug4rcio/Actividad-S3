@@ -1,0 +1,33 @@
+/* Elaborar un programa que permita
+ingresar la cantidad de varones y mujeres y
+muestre el porcentaje de estos para su grupo de
+estudiantes */
+
+package ejercicio.pkg3;
+
+import java.util.Scanner;
+
+public class Ejercicio3 {
+
+    public static void main(String[] args) {
+
+        double varones, mujeres, total, porcentajeV, porcentajeM;
+        
+        Scanner sc = new Scanner (System.in);
+        
+        System.out.println("Ingresar cantidad de varones: ");
+        varones = sc.nextInt();
+        
+        System.out.println("Ingresar cantidad de mujeres: ");
+        mujeres = sc.nextInt();
+        
+        total = varones + mujeres;
+        
+        porcentajeV = (varones*100)/total;
+        porcentajeM = (mujeres*100)/total;
+        
+        System.out.println("El porcentaje de varones en el grupo es de: %" + porcentajeV);
+        System.out.println("El porcentaje de mujeres en el grupo es de: %" + porcentajeM);
+        
+    }
+}
