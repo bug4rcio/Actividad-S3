@@ -1,0 +1,42 @@
+/*
+La municipalidad de Pueblo Libre piensa invertir cierto monto de dinero en la
+reparación de las pistas en las avenidas principales. Desarrollar un
+pseudocódigo que permita ingresar un monto de inversión en soles y lo
+reparta en la refacción de cinco avenidas de la siguiente manera:
+a. Avenida La Mar - 35% del monto
+b. Avenida Abancay - 25% del monto
+c. Avenida 28 de Julio - 10% del monto
+d. Avenida Aviación - 15% del monto
+e. Avenida Tacna - restante del monto
+Mostrar cuanto le correspondería a cada avenida.
+*/
+
+package ejercicio.pkg4;
+
+import java.util.Scanner;
+
+public class Ejercicio4 {
+
+    public static void main(String[] args) {
+        
+        double monto, porcentaje, total, a, b, c, d, e;
+        
+        Scanner sc = new Scanner (System.in);
+        
+        System.out.println("Ingresar monto de inversión:");
+        monto = sc.nextDouble();
+        
+        a = (monto * 35) / 100;
+        b = (monto * 25) / 100;
+        c = (monto * 10) / 100;
+        d = (monto * 15) / 100;
+        e = (monto * 15) / 100;
+        
+        System.out.println("El monto que le pertenece a la Av. La Mar es de: S/" + a);
+        System.out.println("El monto que le pertenece a la Av. Abancay es de: S/" + b);
+        System.out.println("El monto que le pertenece a la Av. 28 de Julio es de: S/" + c);
+        System.out.println("El monto que le pertenece a la Av. Aviación es de: S/" + d);
+        System.out.println("El monto que le pertenece a la Av. Tacna es de: S/" + e);
+        
+    }
+}
