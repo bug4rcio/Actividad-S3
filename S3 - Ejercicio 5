@@ -1,0 +1,28 @@
+/*
+Elabore un programa que permita determinar si un número entero
+positivo es número par.
+*/
+
+package ejercicio.pkg5;
+
+import java.util.Scanner;
+
+public class Ejercicio5 {
+
+    public static void main(String[] args) {
+        
+        int numero;
+        
+        Scanner sc = new Scanner (System.in);
+        
+        System.out.println("Ingresar un número:");
+        numero = sc.nextInt();
+        
+        if (numero > 0 && numero % 2 == 0) {
+            System.out.println("Es un número positivo y par");
+            
+        } else {
+            System.out.println("No es un número positivo o no es par");
+        }
+    }
+}
